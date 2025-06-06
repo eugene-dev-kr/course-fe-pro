@@ -17,7 +17,7 @@ function checkEmptyString(inputValue) {
 function userPortrait() {
 
     // User year born
-    let userBornYearInput = prompt('Введіть свій рік народження:');
+    const userBornYearInput = prompt('Введіть свій рік народження:');
     let userBornYearOutput = 'Ви не ввели свій рік народження';
     if (userBornYearInput === null) {
         alert('Шкода що ви не захотіли вводити ваш рік народження!');
@@ -44,10 +44,10 @@ function userPortrait() {
                 outputCityStateMain = outputMessageState + 'України';
                 break;
             case 'Вашингтон':
-                outputMessageState = outputMessageState + 'США';
+                outputCityStateMain = outputMessageState + 'США';
                 break;
             case 'Лондон':
-                outputMessageState = outputMessageState + 'Лондон';
+                outputCityStateMain = outputMessageState + 'Лондон';
                 break;
         }
     } else outputCityStateMain = outputMessageCity + userCity;
