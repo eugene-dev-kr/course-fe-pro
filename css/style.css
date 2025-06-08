@@ -52,12 +52,89 @@ a {
 }
 
 body {
+    /*line-height: 1;*/
+    /*height: 100vh;*/
+    /*font-family: 'Karma', sans-serif;*/
+    /*font-size: 4em;*/
+    /*color: darksalmon;*/
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    background-color: #eeeeee;
+    padding: 15px;
+    padding-top: 0;
+    line-height: 1.6;
+}
+
+.homework {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.exercises {
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 5px solid salmon;
+    margin-bottom: 15px;
+}
+table, tr, td{
+    border: 1px solid lightgray;
+    padding: 5px;
+}
+
+.main-title {
     line-height: 1;
-    height: 100vh;
     font-family: 'Karma', sans-serif;
-    font-size: 4em;
+    font-size: 1.5em;
     color: darksalmon;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 15px;
+}
+
+.input-number {
+    min-width: 250px;
+}
+
+.input-number, .btn-show-number {
+    padding: 10px;
+    border: 1px solid darksalmon;
+    border-radius: 5px;
+    outline: none;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.btn-show-number {
+    cursor: pointer;
+    color: #3d2a85;
+    background: none;
+}
+
+.btn-show-number:hover {
+    background-color: whitesmoke;
+    color: #b92222;
+}
+
+.input-number:focus {
+   border-color: crimson;
+}
+
+.multiplication-table-container {
+    background-color: burlywood;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr) 1fr;
+    gap: 10px;
+    padding: 10px;
+}
+
+.multiplication-table__item {
+    background-color: cornsilk;
+    padding: 15px;
+    border-radius: 5px;
 }
