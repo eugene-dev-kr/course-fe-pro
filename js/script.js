@@ -2,7 +2,7 @@
 
 const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
 
-const generateKey = (lengthKey, chars) => {
+const generateKey = (lengthKey = 8, chars = 'abcdefghijklmnopqrstuvwxyz0123456789') => {
     let result = '';
     for (let i = 1; i <= lengthKey; i++) {
         let oneRandomNum = Math.floor(Math.random() * chars.length);
@@ -11,6 +11,8 @@ const generateKey = (lengthKey, chars) => {
     return result;
 }
 
-const key = generateKey(8,characters);
+const key = generateKey();
+const key2 = generateKey(5, characters);
 
 console.log(key);
+console.log(key2);
