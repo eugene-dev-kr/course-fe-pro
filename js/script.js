@@ -29,5 +29,24 @@ const doMath = (x, znak, y) => {
     }
 }
 
-console.log(doMath(2,'+',5))
+console.log(doMath(2,'+',5));
 
+// 3
+const arrUserFill = () => {
+    const arrMainSize = +prompt('Вкажіть розмір головного масиву:')
+    const arrInnerSize = +prompt('Вкажіть розмір внутрішніх масивів:')
+    let arrMain = [];
+    let arrInnerCount = 1;
+    for (let i = 0; i < arrMainSize; i++) {
+        let arrInner = [];
+        for(let j = 0; j < arrInnerSize; j++) {
+            const arrInnerValue = +prompt(`Введіть значення для масиву ${arrInnerCount}:` );
+            arrInner.push(arrInnerValue);
+        }
+        arrMain.push(arrInner);
+        arrInnerCount++;
+    }
+    return arrMain;
+}
+
+console.log(arrUserFill());
