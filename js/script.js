@@ -50,3 +50,15 @@ const arrUserFill = () => {
 }
 
 console.log(arrUserFill());
+
+// 4
+const delLetter = (world, letter) => {
+    const resultWorld = [];
+    for(let i = 0; i < world.length; i++) {
+        if(!letter.includes(world[i])) resultWorld.push(world[i]);
+    }
+    return resultWorld.length > 0 ? resultWorld.join('') : null;
+}
+
+console.log(delLetter('hello world',['l', 'd'])); // heo wor
+console.log(delLetter('hll',['l', 'h'])); // null
