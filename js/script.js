@@ -17,5 +17,17 @@ const arithmeticMean = (arr) => {
 
 console.log(arithmeticMean(arrInput))
 
+// 2
+const doMath = (x, znak, y) => {
+    switch (znak) {
+        case '+': return x + y;
+        case '-': return x - y;
+        case '*': return x * y;
+        case '/': return x / y;
+        case '%': return x % y;
+        case '^': return x ** y;
+    }
+}
 
+console.log(doMath(2,'+',5))
 
