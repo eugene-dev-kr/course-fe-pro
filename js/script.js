@@ -48,7 +48,7 @@
 // console.log(funcLastIndexOf(arrInput, 'dog', 6));
 // console.log(funcLastIndexOf(arrInput, 'dog', -15));
 
-// 3 function funcLastIndexOf > method lastIndexOf
+// 3 function funcFind > method find
 // const animals = ['dog', 'cat', 'horse', 'elephant'];
 //
 // const funcFind = (arr, callBack) => {
@@ -63,3 +63,18 @@
 // const resultFind3 = funcFind(animals, (item) => item === "cow");
 //
 // console.log(`${resultFind1}\n${resultFind2}\n${resultFind3}\n`);
+
+//4 function funcFindIndex > method findIndex
+const arrInput = ['dog', 'cat', 'horse', 'dog', 'elephant'];
+
+const funcFindIndex = (arr, callBack) => {
+    for(let i = 0; i < arr.length; i++) {
+        if(callBack(arr[i], i, arr)) return i;
+    }
+    return -1;
+}
+
+const resultFindIndex1 = funcFindIndex(arrInput, (item) => item === "dog");
+const resultFindIndex2 = funcFindIndex(arrInput, (item) => item === "cow");
+
+console.log(`${resultFindIndex1}\n${resultFindIndex2}\n`);
