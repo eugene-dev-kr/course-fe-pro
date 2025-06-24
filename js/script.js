@@ -99,7 +99,7 @@
 // console.log(funcIncludes(arrInput, 'dog', 1));
 // console.log(funcIncludes(arrInput, 'dog', -1));
 
-// 5 function funcEvery > method every
+// 6 function funcEvery > method every
 // const nums1 = [3, 6, 12, 20, 0, 22, 60, 100];
 // const nums2 = [2, 6, 20, 22, 60, 100];
 // const emptyArr = [];
@@ -112,6 +112,26 @@
 //         if(!callBack(arrInput[i], i , arrInput)) return false;
 //     }
 //     return true;
+// }
+//
+// console.log(funcEvery(emptyArr, (item) => item > 0));
+// console.log(funcEvery(nums1, (item) => item >= 0));
+// console.log(funcEvery(nums1, (item) => item % 2 === 0));
+// console.log(funcEvery(nums2, (item) => item % 2 === 0));
+
+//7  function funcSome > method some
+// const nums1 = [3, 6, 12, 20, 0, 22, 60, 100];
+// const nums2 = [2, 6, 20, 22, 60, 100];
+// const emptyArr = [];
+//
+// const funcSome = (arrInput, callBack) => {
+//
+//     if(arrInput.length === 0) return false;
+//
+//     for(let i = 0; i < arrInput.length; i++) {
+//         if(callBack(arrInput[i], i , arrInput)) return true;
+//     }
+//     return false;
 // }
 //
 // console.log(funcEvery(emptyArr, (item) => item > 0));
