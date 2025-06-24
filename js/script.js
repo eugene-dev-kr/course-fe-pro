@@ -65,16 +65,36 @@
 // console.log(`${resultFind1}\n${resultFind2}\n${resultFind3}\n`);
 
 //4 function funcFindIndex > method findIndex
-const arrInput = ['dog', 'cat', 'horse', 'dog', 'elephant'];
+// const arrInput = ['dog', 'cat', 'horse', 'dog', 'elephant'];
+//
+// const funcFindIndex = (arr, callBack) => {
+//     for(let i = 0; i < arr.length; i++) {
+//         if(callBack(arr[i], i, arr)) return i;
+//     }
+//     return -1;
+// }
+//
+// const resultFindIndex1 = funcFindIndex(arrInput, (item) => item === "dog");
+// const resultFindIndex2 = funcFindIndex(arrInput, (item) => item === "cow");
+//
+// console.log(`${resultFindIndex1}\n${resultFindIndex2}\n`);
 
-const funcFindIndex = (arr, callBack) => {
-    for(let i = 0; i < arr.length; i++) {
-        if(callBack(arr[i], i, arr)) return i;
-    }
-    return -1;
-}
-
-const resultFindIndex1 = funcFindIndex(arrInput, (item) => item === "dog");
-const resultFindIndex2 = funcFindIndex(arrInput, (item) => item === "cow");
-
-console.log(`${resultFindIndex1}\n${resultFindIndex2}\n`);
+// 5 function funcIncludes > method includes
+// const arrInput = ['dog', 'cat', 'horse', 'dog', 'elephant'];
+//
+// const funcIncludes = (arrInput, findEl, startIndex) => {
+//     if(startIndex === undefined) startIndex = 0;
+//     if(startIndex < 0) {
+//         startIndex += arrInput.length;
+//         if(startIndex < 0) startIndex = 0;
+//     }
+//     if(startIndex >= arrInput.length) return false;
+//     for(let i = startIndex; i < arrInput.length; i++) {
+//         if (findEl === arrInput[i]) return true;
+//     }
+//     return false;
+// }
+//
+// console.log(funcIncludes(arrInput, 'dog'));
+// console.log(funcIncludes(arrInput, 'dog', 1));
+// console.log(funcIncludes(arrInput, 'dog', -1));
