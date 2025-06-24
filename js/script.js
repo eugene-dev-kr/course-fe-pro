@@ -3,11 +3,15 @@
 const nums = [16, -37 , 54, -4, 72, -56, 47, 4, -16, 25, -37, 46, 4, -51, 27, -63, 4, -54, 76, -4, 12, -35, 4, 47];
 
 //1. Sum of positive nums
+let numPositive = 0;
 const sumPositiveNums = nums.reduce((acc, item) => {
-    if(item > 0) acc += item;
+    if(item > 0) {
+        acc += item;
+        numPositive++;
+    }
     return acc;
 }, 0);
-console.log(`1. Сума позитивних чисел: ${sumPositiveNums}`);
+console.log(`1. Сума позитивних чисел: ${sumPositiveNums}; Кількість: ${numPositive}`);
 
 
 
