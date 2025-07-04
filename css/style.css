@@ -62,6 +62,8 @@ body {
     justify-content: center;
     align-items: center;
     gap: 50px;
+    transition-name: background-color;
+    transition-duration: .6s
 }
 
 button {
@@ -77,13 +79,24 @@ button {
     padding: 10px 20px;
     border-radius: 10px;
     transition-name: border-color, color;
-    transition-duration: .4s;
+    transition-duration: .6s;
+}
+
+body.dark-theme #toggle-theme {
+    background-color: #333333;
+    color: #ffffff;
+    border-color: inherit;
+}
+
+body.dark-theme #toggle-theme:hover {
+    border: 1px solid darksalmon;
 }
 
 #toggle-theme:hover {
     border-color: #067376;
     color: #067376;
 }
+
 
 .dark-theme {
     background-color: #708090;
