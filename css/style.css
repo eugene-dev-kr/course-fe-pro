@@ -55,9 +55,34 @@ body {
     line-height: 1;
     height: 100vh;
     font-family: 'Karma', sans-serif;
-    font-size: 4em;
     color: darksalmon;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 50px;
+}
+
+body p {
+    font-size: 4em;
+}
+
+.fruit-select-wrapper{
+    display: flex;
+    gap: 20px;
+}
+
+select#filter {
+    margin-bottom: 65px;
+    padding: 10px 20px 10px 10px;
+    outline: none;
+    border: 1px solid darksalmon;
+    border-radius: 8px;
+}
+
+.fruit-select-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
 }
