@@ -65,3 +65,11 @@ nav.nav ul {
 .nav-item {
     color: #800000;
 }
+
+.nav-item:hover {
+    color: #A0522D;
+}
+
+.nav-item.active {
+    border-bottom: 2px solid rosybrown;
+}
