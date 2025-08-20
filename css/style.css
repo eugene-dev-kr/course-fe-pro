@@ -1,0 +1,131 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+    font-family: inherit;
+}
+
+input {
+    font-family: inherit;
+}
+
+input:focus {
+    border: none;
+    outline: none;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url("../fonts/RobotoMono-Regular.woff2") format("woff2");
+    font-weight: 400;
+}
+
+body {
+    background: #c75757;
+    font-family: Roboto, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.todo-list-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.todo-list {
+    background: #fff;
+    min-height: 100px;
+    width: 400px;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.todo-list__add-group {
+    display: flex;
+    margin: 20px 0;
+}
+
+.todo-list__btn-add,
+.todo-list__btn-delete{
+    padding: 10px;
+    border-radius: 0 20px 20px 0;
+    border:none;
+    background: #c75757;
+    color: white;
+}
+
+.todo-list__input-title {
+    border: none;
+    border: 2px solid lightgray;
+    border-right: none;
+    border-radius: 20px 0 0 20px;
+    flex-grow: 1;
+    padding: 10px;
+}
+
+.todo-list__input-title:focus {
+    border: 2px solid #c75757;
+    border-right: none;
+}
+
+.todo-list__item {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #c75757;
+    border-radius: 5px;
+    align-items: center;
+}
+
+
+
+

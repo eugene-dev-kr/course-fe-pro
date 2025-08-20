@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/Model.js" defer type="module"></script>
+    <script src="js/View.js" defer type="module"></script>
+    <script src="js/Controller.js" defer type="module"></script>
+    <title>HW-47</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="todo-list-wrapper">
+        <div class="todo-list">
+            <h1 class="toto-list__title">ToDo List</h1>
+            <!--Form-->
+            <form class="todo-list__form" data-form-todo>
+                <div class="todo-list__add-group">
+                    <input class="todo-list__input-title" type="text" placeholder="Title" data-input-title>
+                    <button type="submit" class="todo-list__btn-add" data-action-btn="add">Add</button>
+                </div>
+            </form>
+
+            <ul class="todo-list__items" data-items>
+
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
