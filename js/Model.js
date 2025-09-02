@@ -20,11 +20,19 @@ class Model {
         const newTask = {
             titleID: this.taskId,
             titleTask: task,
+            isCompleted: false,
         }
         this.tasks.push(newTask);
         this.taskId++;
         this.saveTask();
         return newTask;
+    }
+
+    doneTask(id) {
+        const task = this.tasks.find(t => t.titleID === id);
+        if (task) task.isCompleted = !task.isCompleted; // перемикаємо true/false
+        this.saveTask(); // зберігаємо масив у localStorage
+        return task; // повертаємо оновлений об'єкт
     }
 
     deleteTask(id) {
