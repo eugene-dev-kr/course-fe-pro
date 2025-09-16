@@ -5,11 +5,130 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <title>HW-53</title>
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Eugene</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About -->
+    <section id="about" class="min-vh-100 py-5 mt-5">
+    <div class="container">
+        <div class="row align-items-center">
+        <div class="col-md-4 text-center">
+            <img src="img/my_profile_photo.jpg" class="img-fluid rounded" alt="Profile">
+        </div>
+        <div class="col-md-8">
+            <h2>About Me</h2>
+            <p>Hello! I'm a beginner front-end developer learning Bootstrap and web development. I love creating responsive websites and improving my coding skills.</p>
+        </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="bg-light min-vh-100 min-vh-100 py-5 mt-5">
+        <div class="container">
+            <h2 class="mb-4">Skills</h2>
+            <div class="mb-3">
+                <label>HTML</label>
+                <div class="progress">
+                    <div class="progress-bar bg-success" style="width: 80%;">80%</div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label>CSS</label>
+                <div class="progress">
+                    <div class="progress-bar bg-info" style="width: 70%;">70%</div>
+                </div>
+            </div>
+                <div class="mb-3">
+                <label>JavaScript</label>
+                <div class="progress">
+                    <div class="progress-bar bg-warning" style="width: 60%;">60%</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Projects -->
+    <section id="projects" class="py-5 min-vh-100 py-5 mt-5">
+    <div class="container">
+        <h2 class="mb-4">Projects</h2>
+        <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card">
+            <img src="img/project.png" class="card-img-top p-3" alt="Project 1">
+            <div class="card-body">
+                <h5 class="card-title">Project 1</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, itaque.</p>
+                <a href="#" class="btn btn-primary mt-3">Go somewhere</a>
+            </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+            <img src="img/project.png" class="card-img-top p-3" alt="Project 2">
+            <div class="card-body">
+                <h5 class="card-title">Project 2</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, earum.</p>
+                <a href="#" class="btn btn-primary mt-3">Go somewhere</a>
+            </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+            <img src="img/project.png" class="card-img-top p-3" alt="Project 3">
+            <div class="card-body">
+                <h5 class="card-title">Project 3</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, aliquid.</p>
+                <a href="#" class="btn btn-primary mt-3">Go somewhere</a>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-5 bg-light min-vh-100 py-5 mt-5">
+        <div class="container">
+            <h2 class="mb-4">Contact</h2>
+            <form>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Your Name">
+                </div>
+                <div class="mb-3">
+                    <input type="email" class="form-control" placeholder="Your Email">
+                </div>
+                <div class="mb-3">
+                    <textarea class="form-control" rows="4" placeholder="Message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-light text-center py-3">
+        © 2025 Martynenko Eugene. All Rights Reserved.
+    </footer>
 
 </body>
 </html>
