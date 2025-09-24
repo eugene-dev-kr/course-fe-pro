@@ -13,15 +13,27 @@ function SmileCounter() {
 
     function calcWinner() {
         const listSmiles = [...smiles];
-        const smilesCounts = [];
+        const smilesCountsNotZero = [];
+        const emojiCounts = [];
 
         for(let i = 0; i < listSmiles.length; i++) {
-            smilesCounts.push(listSmiles[i].count);
+            if(listSmiles[i].count === 0) {
+                continue;
+            }else smilesCountsNotZero.push(listSmiles[i]);
         }
 
-        const maxCountOfSmile = Math.max(...smilesCounts);
+        if(smilesCountsNotZero.length === 0) 
+            {
+                return;
+            } else {
+                for(let i = 0; i < smilesCountsNotZero.length; i++) {
+                    emojiCounts.push(smilesCountsNotZero[i].count);
+                }
+            }
+      
+        const maxCountOfSmile = Math.max(...emojiCounts);
         const winObjSmile = listSmiles.find(smile => smile.count === maxCountOfSmile);
-        
+
         setWinnerSmile(winObjSmile);
     }
 
@@ -65,7 +77,7 @@ function SmileCounter() {
                 <div className="smile-boards__winner">
                     <ButtonResult onClick={calcWinner}/>
                     <span>Winner:</span>
-                    {winnerSmile && <span>{winnerSmile.emoji}</span>}
+                     {winnerSmile ? <span>{winnerSmile.emoji}</span> : <span>Немає кліків</span>}
                 </div>
             </div>
         </div> 
@@ -83,6 +95,5 @@ function ButtonResult({ onClick }) {
         <button onClick = { onClick }>Show results</button>
     );
 }
-
 
 export default SmileCounter;
