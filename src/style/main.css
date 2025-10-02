@@ -1,0 +1,56 @@
+@import url(./normalize.css);
+
+@font-face {
+    font-family: "Roboto";
+    src: url(../assets/fonts/RobotoMono-Regular.woff2) format('woff2');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+body {
+    font-family: Roboto;
+}
+
+ul {
+    padding: 0;
+}
+
+.form-todo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    button[type="submit"] {
+        margin-block: 20px;
+    }
+}
+
+.todo-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-todo__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+    width: 400px;
+}
+
+.form-todo__item {
+    padding: 15px;
+    list-style-type: none;
+    border: 1px solid indianred;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.form-todo__item.done {
+    text-decoration: line-through;
+    color: gray;
+}
