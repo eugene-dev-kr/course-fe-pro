@@ -29,18 +29,18 @@ class TimerClass extends React.Component {
     }
 
     componentDidMount() {
-       const savedSeconds = localStorage.getItem('timerSeconds');
+       const savedSeconds = localStorage.getItem('timerSecondsClass');
         if (savedSeconds !== null) {
             this.setState({ seconds: Number(savedSeconds) });
         }
     }
     
     componentDidUpdate(prevProps, prevState) {
-        localStorage.setItem('timerSeconds', this.state.seconds);
+        localStorage.setItem('timerSecondsClass', this.state.seconds);
     }
 
     componentWillUnmount() {
-        localStorage.removeItem('timerSeconds');
+        localStorage.removeItem('timerSecondsClass');
         clearInterval(this.interval);
     }
 
@@ -49,7 +49,7 @@ class TimerClass extends React.Component {
         return(
             <div className="timer">
                 <div className="timer__value">
-                    <h2>Seconds: </h2>
+                    <h2>Seconds (class): </h2>
                     <span className="timer__count">{this.state.seconds}</span>
                 </div>
                 <div className="timer__btns-container">
