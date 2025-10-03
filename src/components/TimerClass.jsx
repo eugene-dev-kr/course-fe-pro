@@ -50,7 +50,7 @@ class TimerClass extends React.Component {
             <div className="timer">
                 <div className="timer__value">
                     <h2>Seconds (class): </h2>
-                    <span className="timer__count">{this.state.seconds}</span>
+                    <span className={`timer__count ${this.state.isRunning ? '' : 'stop'}`}>{this.state.seconds}</span>
                 </div>
                 <div className="timer__btns-container">
                     <button className="timer__btn-start" onClick={this.start}>Start</button>

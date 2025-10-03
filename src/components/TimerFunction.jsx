@@ -49,7 +49,7 @@ export default function TimerFunction() {
         <div className="timer">
             <div className="timer__value">
                 <h2>Seconds (Func): </h2>
-                <span className="timer__count">{seconds}</span>
+                <span className={`timer__count ${isRunning ? '' : 'stop'}`}>{seconds}</span>
             </div>
             <div className="timer__btns-container">
                 <button className="timer__btn-start" onClick={start}>Start</button>
