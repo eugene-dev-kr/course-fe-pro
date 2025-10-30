@@ -12,15 +12,15 @@ function SearchBar({onSearch}) {
     };
 
     return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        placeholder="Введіть назву міста"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-      />
-      <button type="submit">Пошук</button>
-    </form>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="Введіть назву міста"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+        />
+        <button type="submit">Пошук</button>
+      </form>
   );
 
 }
