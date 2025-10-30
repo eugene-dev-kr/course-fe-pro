@@ -1,0 +1,39 @@
+.app {
+  min-height: 100vh;
+  padding: 20px;
+  font-family: sans-serif;
+  color: #222;
+  transition: background 0.6s ease;
+}
+
+.weather-sunny {
+  background: linear-gradient(180deg, #fceabb 0%, #f8b500 100%);
+}
+
+.weather-night {
+  background: linear-gradient(180deg, #1a2a6c 0%, #b21f1f 100%);
+  color: #fff;
+}
+
+.weather-cloudy {
+  background: linear-gradient(180deg, #bdc3c7 0%, #2c3e50 100%);
+  color: #f9f9f9;
+}
+
+.weather-rain {
+  background: linear-gradient(180deg, #74ebd5 0%, #ACB6E5 100%);
+  color: #fff;
+}
+
+.weather-snow {
+  background: linear-gradient(180deg, #e0eafc 0%, #cfdef3 100%);
+}
+
+.weather-storm {
+  background: linear-gradient(180deg, #232526 0%, #414345 100%);
+  color: #fff;
+}
+
+.weather-default {
+  background: linear-gradient(180deg, #ece9e6 0%, #ffffff 100%);
+}
