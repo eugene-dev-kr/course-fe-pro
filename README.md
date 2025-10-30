@@ -1,16 +1,40 @@
-# React + Vite
+<b>Мета:</b> Створити невеликий застосунок, який показує погоду для введеного міста, з можливістю додати місто у “вибрані”.  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<b>Основний функціонал</b>  
+1. <b>Пошук міста</b>  
+    &bull; Інпут для введення назви міста.  
+    &bull; Після натискання кнопки “Пошук” — завантажується погода через API.  
+    &bull; Якщо місто не знайдено — показати повідомлення про помилку.  
+2. <b>Відображення погоди</b>  
+   &bull; Назва міста, країна.  
+   &bull; Поточна температура, вітер, опис погоди.  
+   &bull; Прогноз на кілька днів (мін/макс температура).  
+3. <b>Обране</b>  
+   &bull; Кнопка “Додати в обрані” / “Видалити”.  
+   &bull; Обрані міста зберігаються у <b>localStorage.</b>    
+   &bull; Можна швидко натиснути на обране місто, щоб оновити погоду.  
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<b>API (без ключа)</b>  
+1. <b>Геокодування (пошук міста):</b> https://geocoding-api.open-meteo.com/v1/search?name={CITY}&count=1&language=uk  
 
-## React Compiler
+2. <b>Погода:</b> https://api.open-meteo.com/v1/forecast?latitude={LAT}&longitude={LON}&current_weather=true&daily=temperature_2m_max,temperature_2m_min&timezone=auto  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+<b>Компоненти</b>  
+    &bull; `<App />` — головний компонент  
+    &bull; `<SearchBar />` — інпут і кнопка пошуку  
+    &bull; `<WeatherCard />` — показує погоду для поточного міста  
+    &bull; `<FavoritesList />` — список обраних міст  
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+<b>Використати</b>  
+    &bull; React Hooks: useState, useEffect  
+    &bull; Робота з API: fetch  
+    &bull; Збереження в localStorage  
+    &bull; Умовний рендеринг (Loading / Error / Empty)  
+
+
+<b>Додатково (опціонально)</b>  
+    &bull; Додайте кастомний хук useWeather.  
+
+Зробіть фон, що змінюється залежно від погоди (сонячно, дощ, сніг).  
